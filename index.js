@@ -25,6 +25,7 @@ app.use(express.static("public"));
 app.use(passport.initialize());
 app.use(passport.session());
 
+//change the password into .env file
 const db = new pg.Client({
   user: process.env.SESSION_SECRET,
   host: process.env.PG_HOST,
